@@ -16,7 +16,7 @@ def nameFile(instance, filename):
 class Room(models.Model):
     floor=models.CharField(_('floor'),max_length=255,blank=True,null=True)
     building_name=models.CharField(_('building_name'),max_length=255,blank=True,null=True)
-    tiles=models.CharField(_('tiles'),max_length=255,blank=True,null=True)
+    tiles=models.TextField(_('tiles'),blank=True,null=True)
     formatID=models.CharField(_('formatID'),max_length=255,blank=True,null=True)
     image=models.CharField(_('image'),max_length=255,blank=True,null=True)
     class Meta:
