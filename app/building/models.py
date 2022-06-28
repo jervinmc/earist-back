@@ -16,7 +16,8 @@ def nameFile(instance, filename):
 class Building(models.Model):
     # floor=models.CharField(_('floor'),max_length=255,blank=True,null=True)
     tiles=models.TextField(_('tiles'),blank=True,null=True)
+    row=models.IntegerField(_('row'),blank=True,null=True,default=0)
     formatID=models.CharField(_('formatID'),max_length=255,blank=True,null=True)
     image=models.CharField(_('image'),max_length=255,blank=True,null=True)
     class Meta:
-        ordering = ["id"]
+        ordering = ["row"]

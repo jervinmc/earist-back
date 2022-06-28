@@ -18,6 +18,7 @@ class Room(models.Model):
     building_name=models.CharField(_('building_name'),max_length=255,blank=True,null=True)
     tiles=models.TextField(_('tiles'),blank=True,null=True)
     formatID=models.CharField(_('formatID'),max_length=255,blank=True,null=True)
+    row=models.IntegerField(_('row'),blank=True,null=True,default=0)
     image=models.CharField(_('image'),max_length=255,blank=True,null=True)
     class Meta:
-        ordering = ["id"]
+        ordering = ["row"]
